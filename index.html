@@ -529,14 +529,14 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="city">
-                        শহর / এলাকা <span class="required">*</span>
+                    <label for="producttype">
+                        কালার / পিস <span class="required">*</span>
                     </label>
                     <input 
                         type="text" 
-                        id="city" 
-                        name="city" 
-                        placeholder="যেমন: ঢাকা, চট্টগ্রাম, সিলেট"
+                        id="producttype" 
+                        name="producttype" 
+                        placeholder="যেমন: কি কালার ও কত পিস"
                         required
                     >
                 </div>
@@ -587,7 +587,7 @@
         const formMessage = document.getElementById('formMessage');
         
         // Replace this URL with your actual Google Apps Script Web App URL
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwdlIJaUOfTk-TQXKbz6K2u4we58aXW7jXiB6vHx-HxGOxOPmn5wzO8ZplCtUZTZAIG/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbznhm3T7GVGfWJs4Nuc6Z5Q3zLC_eQDFrFe0Di-4ZSZShZgeho-OWVBXpWfDQuQLclV/exec';
         
         orderForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -606,7 +606,7 @@
                 fullName: formData.get('fullName'),
                 phone: formData.get('phone'),
                 address: formData.get('address'),
-                city: formData.get('city'),
+                producttype: formData.get('producttype'),
                 note: formData.get('note') || '',
                 timestamp: new Date().toISOString()
             };
