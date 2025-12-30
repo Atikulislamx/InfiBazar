@@ -5,710 +5,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ইনফিবাজার - সেরা মানের পণ্য সরাসরি আপনার হাতে">
     <meta name="keywords" content="ইনফিবাজার, অনলাইন শপিং, বাংলাদেশ">
-    <title>ইনফিবাজার - প্রিমিয়াম কোয়ালিটি পণ্য</title>
-    
+    <meta name="author" content="Infibazar Bangladesh">
+    <title>ইনফিবাজার - E9 AirPods Pro</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Consolidated CSS -->
     <style>
-        /* CSS Reset & Base Styles */
+        /* CSS Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             color: #333;
-            background-color: #fff;
+            background: #fff;
+            line-height: 1.6;
         }
-        
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         img {
-            max-width: 100%;
-            height: auto;
             display: block;
+            width: 100%;
+            height: auto;
         }
-        
-        /* Container */
+
         .container {
+            width: 95%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
-        
-        /* Header with Logo */
+
+        /* Header */
         .header {
             background: #fff;
             padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 10;
         }
-        
-        .logo {
-            max-width: 150px;
+        .header .logo {
+            width: 150px;
+            display: block;
             margin: 0 auto;
         }
-        
+
         /* Hero Section */
         .hero {
-            padding: 40px 0;
             text-align: center;
+            padding: 40px 0;
+            background: #f9f9f9;
         }
-        
-        .hero-image {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .hero .hero-image {
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
-        
         .hero h1 {
             font-size: 28px;
             color: #1E90FF;
-            margin-bottom: 15px;
-            line-height: 1.4;
+            margin-bottom: 10px;
         }
-        
         .hero p {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 25px;
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
         }
-        
-        /* CTA Button */
         .cta-button {
-            display: inline-block;
             background: #1E90FF;
-            color: #fff;
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease-in-out;
             box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3);
         }
-        
         .cta-button:hover {
             background: #1874CD;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(30, 144, 255, 0.4);
+            box-shadow: 0 6px 14px rgba(30, 144, 255, 0.4);
         }
-        
+
         /* Product Details Section */
         .product-details {
-            padding: 50px 0;
-            background: #f9f9f9;
+            padding: 40px 0;
         }
-        
-        .section-title {
+        .product-details .section-title {
+            font-size: 24px;
             text-align: center;
-            font-size: 32px;
+            margin-bottom: 20px;
             color: #1E90FF;
-            margin-bottom: 30px;
         }
-        
         .product-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .product-description {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-        }
-        
-        .features-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-        
-        .features-list li {
-            padding: 12px 0;
-            padding-left: 30px;
-            position: relative;
-            font-size: 16px;
-        }
-        
-        .features-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #1E90FF;
-            font-weight: bold;
-            font-size: 20px;
-        }
-        
-        .product-images {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
         }
-        
-        .product-images img {
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        /* Trust Section */
-        .trust-section {
-            padding: 50px 0;
-            background: #fff;
-        }
-        
-        .trust-items {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .trust-item {
-            text-align: center;
-            padding: 25px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        
-        .trust-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-        
-        .trust-item h3 {
-            font-size: 18px;
-            color: #1E90FF;
-            margin-bottom: 10px;
-        }
-        
-        .trust-item p {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            margin-top: 40px;
-        }
-        
-        .testimonial {
-            background: #f0f8ff;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border-left: 4px solid #1E90FF;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        
-        .testimonial-author {
-            color: #1E90FF;
-            font-weight: bold;
-        }
-        
-        /* Order Form Section */
-        .order-section {
-            padding: 50px 0;
-            background: linear-gradient(135deg, #1E90FF 0%, #1874CD 100%);
-            color: #fff;
-        }
-        
-        .order-section .section-title {
-            color: #fff;
-        }
-        
-        .order-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
-        .form-group label .required {
-            color: #ff0000;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #1E90FF;
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
-        .submit-button {
-            width: 100%;
-            background: #1E90FF;
-            color: #fff;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .submit-button:hover {
-            background: #1874CD;
-        }
-        
-        .submit-button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        
-        .form-message {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: 600;
-            display: none;
-        }
-        
-        .form-message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            display: block;
-        }
-        
-        .form-message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            display: block;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 30px 0;
-        }
-        
-        .footer p {
-            font-size: 14px;
-        }
-        
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            z-index: 1000;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
-        }
-        
-        .whatsapp-icon {
-            font-size: 32px;
-            line-height: 1;
-        }
-        
-        /* Responsive Design */
         @media (min-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 20px;
-            }
-            
             .product-content {
                 grid-template-columns: 1fr 1fr;
             }
-            
-            .product-images {
-                grid-template-columns: 1fr 1fr;
-            }
-            
+        }
+        .product-description p {
+            margin-bottom: 10px;
+        }
+        .features-list {
+            list-style: none;
+        }
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: #f9f9f9;
+            padding: 40px 0;
+        }
+        .trust-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
             .trust-items {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        
-        @media (min-width: 1024px) {
-            .hero h1 {
-                font-size: 42px;
-            }
-            
-            .section-title {
-                font-size: 36px;
-            }
+        .trust-item {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Order Section */
+        .order-section {
+            padding: 40px 0;
+            background: linear-gradient(135deg, #1E90FF, #1874CD);
+            color: white;
+        }
+        .order-section .order-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #1E90FF;
+            outline: none;
+        }
+        .submit-button {
+            background: #1E90FF;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background: #1874CD;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <!-- Header with Logo -->
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <img src="assets/logo/infibazar-logo.svg" alt="ইনফিবাজার লোগো" class="logo">
+            <a href="#hero">
+                <img src="assets/logo/infibazar-logo.svg" alt="ইনফিবাজার লোগো" class="logo">
+            </a>
         </div>
     </header>
-    
+
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section class="hero" id="hero">
         <div class="container">
-            <img src="assets/products/product-hero.jpg" alt="প্রিমিয়াম পণ্য" class="hero-image">
+            <img src="assets/products/product-hero.jpg" alt="E9 AirPods Pro" class="hero-image" loading="lazy">
             <h1>সেরা মানের পণ্য সরাসরি আপনার দোরগোড়ায়</h1>
             <p>বিশ্বস্ত ও প্রিমিয়াম কোয়ালিটির পণ্য এখন সহজেই পাবেন</p>
             <a href="#order" class="cta-button">এখনই অর্ডার করুন</a>
         </div>
     </section>
-    
+
     <!-- Product Details Section -->
-    <section id="product-details" class="product-details">
+    <section class="product-details" id="product-details">
         <div class="container">
-            <h2 class="section-title">পণ্যের বিবরণ</h2>
+            <h2 class="section-title">E9 AirPods Pro</h2>
             <div class="product-content">
-                <div class="product-info">
-                    <div class="product-description">
-                        <p>আমাদের এই বিশেষ পণ্যটি তৈরি করা হয়েছে সর্বোচ্চ মান বজায় রেখে। প্রতিটি পণ্য সযত্নে নির্বাচিত এবং যাচাই করা হয় যাতে আপনি পান সেরা অভিজ্ঞতা।</p>
-                        
-                        <ul class="features-list">
-                            <li>প্রিমিয়াম কোয়ালিটি নিশ্চিত</li>
-                            <li>দীর্ঘস্থায়ী ও টেকসই</li>
-                            <li>সাশ্রয়ী মূল্যে উন্নত মান</li>
-                            <li>সারাদেশে হোম ডেলিভারি</li>
-                            <li>ক্যাশ অন ডেলিভারি সুবিধা</li>
-                            <li>১০০% অরিজিনাল পণ্যের গ্যারান্টি</li>
-                        </ul>
-                    </div>
+                <div class="product-description">
+                    <p>আমাদের E9 AirPods Pro তৈরি করা হয়েছে সর্বোচ্চ মান বজায় রেখে।</p>
+                    <ul class="features-list">
+                        <li>অরিজিনাল মানের সাউন্ড</li>
+                        <li>২০ ঘন্টা ব্যাটারি ব্যাকআপ</li>
+                        <li>ইন্টারেক্টিভ স্ক্রিন</li>
+                    </ul>
                 </div>
-                
-                <div class="product-images">
-                    <img src="assets/products/product-side.jpg" alt="পণ্যের সাইড ভিউ">
-                    <img src="assets/products/product-close-up.jpg" alt="পণ্যের ক্লোজ-আপ ভিউ">
+                <div class="product-image">
+                    <img src="assets/products/product-side.jpg" alt="পণ্যের সাইড ভিউ" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Trust Section -->
-    <section id="trust" class="trust-section">
-        <div class="container">
-            <h2 class="section-title">কেন আমাদের বিশ্বাস করবেন?</h2>
-            
-            <div class="trust-items">
-                <div class="trust-item">
-                    <div class="trust-icon">🚚</div>
-                    <h3>দ্রুত ডেলিভারি</h3>
-                    <p>সারাদেশে ৩-৫ দিনের মধ্যে পৌঁছে যাবে</p>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">💰</div>
-                    <h3>ক্যাশ অন ডেলিভারি</h3>
-                    <p>পণ্য হাতে পেয়ে টাকা পরিশোধ করুন</p>
-                </div>
-                
-                <div class="trust-item">
-                    <div class="trust-icon">🔒</div>
-                    <h3>নিরাপদ পেমেন্ট</h3>
-                    <p>আপনার তথ্য সম্পূর্ণ সুরক্ষিত</p>
-                </div>
-            </div>
-            
-            <!-- Testimonials -->
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p class="testimonial-text">"অসাধারণ পণ্য! ডেলিভারি সময়মতো এবং কোয়ালিটি খুবই ভালো। ইনফিবাজার থেকে কেনাকাটা করে আমি সন্তুষ্ট।"</p>
-                    <p class="testimonial-author">- আয়েশা রহমান, ঢাকা</p>
-                </div>
-                
-                <div class="testimonial">
-                    <p class="testimonial-text">"প্রথমবার অনলাইনে অর্ডার করে একটু ভয় ছিল, কিন্তু ইনফিবাজার আমার বিশ্বাস অর্জন করেছে। দারুণ সার্ভিস!"</p>
-                    <p class="testimonial-author">- মোহাম্মদ করিম, চট্টগ্রাম</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Order Form Section -->
-    <section id="order" class="order-section">
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
         <div class="container">
             <h2 class="section-title">অর্ডার করতে ফর্ম পূরণ করুন</h2>
-            
             <form id="orderForm" class="order-form">
                 <div class="form-group">
-                    <label for="fullName">
-                        সম্পূর্ণ নাম <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="fullName" 
-                        name="fullName" 
-                        placeholder="আপনার নাম লিখুন"
-                        required
-                    >
+                    <label for="fullName">সম্পূর্ণ নাম</label>
+                    <input type="text" id="fullName" name="fullName" required>
                 </div>
-                
                 <div class="form-group">
-                    <label for="phone">
-                        মোবাইল নম্বর <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="tel" 
-                        id="phone" 
-                        name="phone" 
-                        placeholder="০১XXXXXXXXX"
-                        pattern="01[0-9]{9}"
-                        required
-                    >
+                    <label for="phone">মোবাইল নম্বর</label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
-                
                 <div class="form-group">
-                    <label for="address">
-                        সম্পূর্ণ ঠিকানা <span class="required">*</span>
-                    </label>
-                    <textarea 
-                        id="address" 
-                        name="address" 
-                        placeholder="বাসা/ফ্ল্যাট নং, রোড নং, এলাকা"
-                        required
-                    ></textarea>
+                    <label for="address">ঠিকানা</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
                 </div>
-                
-                <div class="form-group">
-                    <label for="producttype">
-                        কালার / পিস <span class="required">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="producttype" 
-                        name="producttype" 
-                        placeholder="যেমন: কি কালার ও কত পিস"
-                        required
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <label for="note">
-                        বিশেষ নোট (ঐচ্ছিক)
-                    </label>
-                    <textarea 
-                        id="note" 
-                        name="note" 
-                        placeholder="কোন বিশেষ নির্দেশনা থাকলে লিখুন"
-                    ></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button" id="submitButton">
-                    অর্ডার নিশ্চিত করুন
-                </button>
-                
-                <div id="formMessage" class="form-message"></div>
+                <button type="submit" class="submit-button">অর্ডার নিশ্চিত করুন</button>
             </form>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; ২০২৪ ইনফিবাজার। সর্বস্বত্ব সংরক্ষিত।</p>
-            <p style="margin-top: 10px; font-size: 12px;">বিশ্বস্ত অনলাইন শপিং, আপনার দোরগোড়ায়</p>
-        </div>
+        <p>&copy; ২০২৫ ইনফিবাজার। সর্বস্বত্ব সংরক্ষিত।</p>
     </footer>
-    
-    <!-- WhatsApp Floating Button -->
-    <a 
-        href="https://wa.me/8801XXXXXXXXX?text=আসসালামু%20আলাইকুম,%20আমি%20আপনার%20পণ্য%20সম্পর্কে%20জানতে%20চাই।" 
-        class="whatsapp-float" 
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp এ যোগাযোগ করুন"
-    >
-        <span class="whatsapp-icon">💬</span>
-    </a>
-    
+
+    <!-- Consolidated JavaScript -->
     <script>
-        // Form Submission Handler
-        const orderForm = document.getElementById('orderForm');
-        const submitButton = document.getElementById('submitButton');
-        const formMessage = document.getElementById('formMessage');
-        
-        // Replace this URL with your actual Google Apps Script Web App URL
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxA6eatAN10sb-CaeJTSSp-bs0WyfyD10CwhgRxdJ2djuOt3JoySjD2A3xEWNxu5NBovg/exec';
-        
-        orderForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Disable submit button to prevent double submission
-            submitButton.disabled = true;
-            submitButton.textContent = 'অর্ডার প্রসেস হচ্ছে...';
-            
-            // Hide any previous messages
-            formMessage.className = 'form-message';
-            formMessage.style.display = 'none';
-            
-            // Get form data
-            const formData = new FormData(orderForm);
-            const data = {
-                fullName: formData.get('fullName'),
-                phone: formData.get('phone'),
-                address: formData.get('address'),
-                producttype: formData.get('producttype'),
-                note: formData.get('note') || '',
-                timestamp: new Date().toISOString()
-            };
-            
-            try {
-                // Send data to Google Apps Script
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors', // Required for Google Apps Script
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                // Since mode is 'no-cors', we won't get a readable response
-                // We assume success if no error is thrown
-                showSuccessMessage();
-                
-            } catch (error) {
-                console.error('Error submitting form:', error);
-                showErrorMessage();
-            } finally {
-                // Re-enable submit button
-                submitButton.disabled = false;
-                submitButton.textContent = 'অর্ডার নিশ্চিত করুন';
-            }
-        });
-        
-        function showSuccessMessage() {
-            formMessage.className = 'form-message success';
-            formMessage.textContent = '✓ আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে! আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।';
-            formMessage.style.display = 'block';
-            
-            // Reset form
-            orderForm.reset();
-            
-            // Scroll to message
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
-        }
-        
-        function showErrorMessage() {
-            formMessage.className = 'form-message error';
-            formMessage.textContent = '✗ দুঃখিত, অর্ডার জমা দিতে সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন বা WhatsApp এ যোগাযোগ করুন।';
-            formMessage.style.display = 'block';
-            
-            // Scroll to message
-            formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-        
-        // Smooth scroll for CTA button
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Phone number validation
-        const phoneInput = document.getElementById('phone');
-        phoneInput.addEventListener('input', (e) => {
-            // Remove any non-digit characters
-            let value = e.target.value.replace(/\D/g, '');
-            
-            // Limit to 11 digits
-            if (value.length > 11) {
-                value = value.slice(0, 11);
-            }
-            
-            e.target.value = value;
-        });
-        
-        // Form field validation feedback
-        const requiredFields = orderForm.querySelectorAll('[required]');
-        requiredFields.forEach(field => {
-            field.addEventListener('blur', () => {
-                if (!field.value.trim()) {
-                    field.style.borderColor = '#ff0000';
-                } else {
-                    field.style.borderColor = '#1E90FF';
-                }
-            });
-            
-            field.addEventListener('input', () => {
-                if (field.value.trim()) {
-                    field.style.borderColor = '#1E90FF';
-                }
-            });
+        document.getElementById('orderForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('অর্ডার নিশ্চিত হয়েছে!');
         });
     </script>
 </body>
